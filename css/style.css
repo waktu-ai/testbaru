@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: #3b3bff;
+  --bg: #fff;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.page {
+  width: 100%;
+  position: relative;
+  padding-top: 30px; /* Untuk navbar fixed */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 10px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin-bottom: 0 !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 60px;
+  height: auto;
+  transform: scale(0.8);
+}
+
+.navbar-img {
+  width: 100px;
+  height: auto;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--bg);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 100px;
+  padding-right: 10px;
+  padding-top: 5px;
+  background-color: var(--bg);
+  border-radius: 15px;
+  color: var(--primary);
+}
+
+.search-icon {
+  padding-left: 10px;
+}
+
+.search-icon i {
+  font-size: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero img {
+  width: 90%;
+  height: auto;
+}
+
+.hero h4 {
+  font-size: 20px;
+  width: 100vw;
+  color: var(--bg);
+  background-color: var(--primary);
+  padding: 10px 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input[type="text"],
+.form-container input[type="tel"] {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: 1px solid #010101 !important;
+  /* border-radius: 15px; */
+  border: none;
+}
+
+.fa-placeholder {
+  font-family: "FontAwesome", "Poppins", sans-serif;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #010101;
+  border-radius: 15px;
+  background-color: var(--primary);
+  color: var(--bg);
+}
+
+/* media query */
+@media (max-width: 768px) {
+  .search-bar {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar {
+    display: flex;
+    padding: 5px 5px;
+    margin-top: 0 !important;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 10px;
+    transform: scale(0.8);
+  }
+
+  .navbar-logo {
+    display: flex;
+    transform: scale(0.6);
+  }
+
+  .search-bar {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 10px;
+    padding-top: 10px;
+    transform: scale(0.8);
+  }
+  .search-icon {
+    padding-top: 5px !important;
+    margin-top: -5px !important;
+    transform: scale(1.2);
+  }
+
+  .hero {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero h4 {
+    font-size: 16px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+}
+
+.input-field::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Style khusus untuk input */
+#name,
+#phone {
+  width: 100%;
+  position: relative;
+  padding: 10px 15px 10px 80px;
+}
+
+/* Khusus untuk input phone */
+#phone {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18"><text y="14">🇲🇾</text></svg>'),
+    linear-gradient(90deg, #f0f0f0 45px, #e0e0e0 45px, #e0e0e0 46px, white 46px);
+  background-repeat: no-repeat;
+  background-position: 10px center, 0 0;
+  background-size: 25px auto, 100% 100%;
+}
+
+#name {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18"><text y="14">🪪</text></svg>'),
+    linear-gradient(90deg, #f0f0f0 45px, #e0e0e0 45px, #e0e0e0 46px, white 46px);
+  background-repeat: no-repeat;
+  background-position: 10px center, 0 0;
+  background-size: 25px auto, 100% 100%;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  z-index: 2;
+}
+
+.input-wrapper input {
+  padding-left: 35px; /* Memberikan ruang untuk ikon */
+}
